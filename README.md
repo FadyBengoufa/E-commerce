@@ -51,9 +51,9 @@ $admin = new App\Admin();
 
 add the name and email and the hashed password :
 
-$admin-name = "adminname"
+$admin->name = "adminname"
 
-$admin-email = "adminname@gmail.com"
+$admin->email = "adminname@gmail.com"
 
 $admin->password = Hash::make(123456789); //need to be at least 8 characters
 
