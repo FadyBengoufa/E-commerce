@@ -11,17 +11,31 @@
 
     <!-- Fonts -->
    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="{{ asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        
-            @yield('content')
+        <div id="wrapper">
+            @include('includes.admin_includes.sidebar-dash')
+            <div id="content-wrapper" class="d-flex flex-column">
+                <div id="content">
+                     @include('includes.admin_includes.nav-dash')
+                    <div class="container-fluid">
 
-        @include('includes.footer')
+                        @yield('content')
+
+                    </div>
+                </div>
+            </div>
+          </div>
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
     </div>
+    @include('includes.footer')
 </body>
 </html>
