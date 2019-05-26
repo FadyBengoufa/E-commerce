@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Categorie;
+use App\Product;
 
 use Illuminate\Http\Request;
 
-class AdminCategorieController extends Controller
+class AdminProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,9 +21,6 @@ class AdminCategorieController extends Controller
 
     public function index()
     {
-        $categories = Categorie::paginate(5);
-
-        return view('admin.categorie.show_categorie',compact('categories'))->with('i','1');
 
     }
 
@@ -33,7 +31,10 @@ class AdminCategorieController extends Controller
      */
     public function create()
     {
-        return view('admin.categorie.add_categorie') ;
+        $categories = Categorie::all();
+
+        return view('admin.product.add_product',compact('categories'));
+
     }
 
     /**
@@ -44,14 +45,7 @@ class AdminCategorieController extends Controller
      */
     public function store(Request $request)
     {
-
-       $categorie = new Categorie;
-
-        $categorie->name_categorie = $request->name_categorie;
-
-        $categorie->save();
-
-        return redirect('/admin/categorie/create')->with('categorie_created','Categorie Added');
+        
     }
 
     /**
@@ -73,9 +67,7 @@ class AdminCategorieController extends Controller
      */
     public function edit($id)
     {
-        $categorie = Categorie::find($id);
-
-        return view('admin.categorie.edit_categorie',compact('categorie'));
+        //
     }
 
     /**
@@ -87,11 +79,7 @@ class AdminCategorieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $categorie = Categorie::find($id);
-
-        $categorie->name_categorie = $request->name_categorie;
-        $categorie->save();
-        return redirect('/admin/categorie')->with('catgorie_edited','Categorie Edited');
+        //
     }
 
     /**
@@ -102,10 +90,6 @@ class AdminCategorieController extends Controller
      */
     public function destroy($id)
     {
-        $categorie = Categorie::find($id);
-
-        $categorie->delete();
-
-        return redirect('/admin/categorie')->with('catgorie_deleted','Categorie Deleted');
+        //
     }
 }

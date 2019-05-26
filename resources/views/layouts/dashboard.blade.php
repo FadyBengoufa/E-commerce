@@ -10,11 +10,12 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Fonts -->
-   <link rel="stylesheet" href="{{ asset('css/all.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/sb-admin-2.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css')}}">
 </head>
 <body>
     <div id="app">
@@ -30,7 +31,7 @@
                     </div>
                 </div>
             </div>
-          </div>
+        </div>
       <!-- Scroll to Top Button-->
       <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>

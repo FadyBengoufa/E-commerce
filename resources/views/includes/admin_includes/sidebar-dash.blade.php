@@ -37,8 +37,8 @@
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                   <!--<h6 class="collapse-header"></h6>-->
-                  <a class="collapse-item"  href="{{route('categorie.create')}}">Add</a>
-                  <a class="collapse-item" href="{{route('categorie.index')}}">Show</a>
+                  <a class="collapse-item"  href="{{route('categorie.create')}}">Add categorie</a>
+                  <a class="collapse-item" href="{{route('categorie.index')}}">Show categories</a>
                 </div>
               </div>
             </li>
@@ -52,22 +52,22 @@
               <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                   <!--<h6 class="collapse-header">Custom Utilities:</h6>-->
-                  <a class="collapse-item" href="#">Add</a>
-                  <a class="collapse-item" href="#">Show</a>
+                  <a class="collapse-item" href="{{route('product.create')}}">Add product</a>
+                  <a class="collapse-item" href="{{route('product.index')}}">Show products</a>
                 </div>
               </div>
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!--hr class="sidebar-divider"-->
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <!--div class="sidebar-heading">
               Addons
-            </div>
+            </div-->
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!--li class="nav-item">
               <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                 <i class="fas fa-fw fa-folder"></i>
                 <span>Pages</span>
@@ -78,14 +78,13 @@
                   <a class="collapse-item" href="{{route('admin.login')}}">Login</a>
                   <a class="collapse-item" href="{{route('register')}}">Register</a>
                   <a class="collapse-item" href="#">Forgot Password</a>
-                  <!--<div class="collapse-divider"></div>
+                  <div class="collapse-divider"></div>
                   <h6 class="collapse-header">Other Pages:</h6>
                   <a class="collapse-item" href="#">404 Page</a>
                   <a class="collapse-item" href="#">Blank Page</a>
-                  -->
                 </div>
               </div>
-            </li>
+            </li-->
 
             <!-- Nav Item - Charts -->
             <!--
